@@ -26,7 +26,7 @@
 
 ## Skills 一览
 
-### 1) fq@auto-grade-homework
+### 1) fq-feishu-auto-grade-homework
 
 路径：`fq-feishu-auto-grade-homework/SKILL.md`
 
