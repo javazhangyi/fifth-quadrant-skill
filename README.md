@@ -18,9 +18,9 @@
 
 ```text
 .
-├── fq@feishu-auto-grade-homework/
+├── fq-feishu-auto-grade-homework/
 │   └── SKILL.md
-└── fq@feishu-doc-comment-stats/
+└── fq-feishu-doc-comment-stats/
     └── SKILL.md
 ```
 
@@ -28,7 +28,7 @@
 
 ### 1) fq@auto-grade-homework
 
-路径：`fq@feishu-auto-grade-homework/SKILL.md`
+路径：`fq-feishu-auto-grade-homework/SKILL.md`
 
 用途：
 - 拉取“上行”每日作业（Wiki/Docx）
@@ -42,9 +42,9 @@
 - 作业批改
 - 批改作业
 
-### 2) fq@feishu-doc-comment-stats
+### 2) fq-feishu-doc-comment-stats
 
-路径：`fq@feishu-doc-comment-stats/SKILL.md`
+路径：`fq-feishu-doc-comment-stats/SKILL.md`
 
 用途：
 - 统计指定 Feishu 文档评论总量
@@ -86,7 +86,7 @@ TZ=Asia/Shanghai
 
 欢迎 PR。建议遵循这些约定：
 
-- **新增 Skill**：新建目录 `<namespace>@<skill-name>/`，并提供 `SKILL.md`
+- **新增 Skill**：新建目录 `<namespace>-<skill-name>/`，并提供 `SKILL.md`
 - **SKILL.md 必备信息**：
   - Skill 标识与一句话简介
   - 前置条件（权限、token、群/文档/表格信息）

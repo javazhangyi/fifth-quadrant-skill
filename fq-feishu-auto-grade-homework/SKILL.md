@@ -1,5 +1,5 @@
 ---
-name: fq@feishu-auto-grade-homework
+name: fq-feishu-auto-grade-homework
 description: 基于飞书 Wiki/多维表格/群消息，自动批改「上行」每日作业并记录得分、发优秀到群。使用 Lark-MCP 获取今日日期、读取总文档与各人子文档、评分（优秀/合格/不合格）、留言、维护多维表格、向「上行2026实践小组」推送优秀作业与点评。适用于用户说「执行今日作业批改」「作业批改」「批改作业」或定时触发时。
 ---
 

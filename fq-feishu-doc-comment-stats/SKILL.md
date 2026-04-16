@@ -1,9 +1,14 @@
-# fq@Feishu 文档评论统计
+---
+name: fq-feishu-doc-comment-stats
+description: 统计飞书文档评论数量与评分信息。提取指定 Feishu 文档中的评论总量、评分关键词（优秀/合格/不合格）及评论时间，支持分页处理。适用于用户说「统计文档评论」「评论评分统计」「飞书评论统计」或需要批量统计文档评审信息的场景。
+---
 
-Skill 标识：fq@feishu-doc-comment-stats
+# fq-Feishu 文档评论统计
+
+Skill 标识：fq-feishu-doc-comment-stats
 
 ## 1. 功能描述
-该 Skill 用于统计指定 Feishu 文档中的评论数量，并提取每条评论的评分（如“优秀”“合格”）及评论时间。可用于教师作业打分、文档评审统计等场景。
+该 Skill 用于统计指定 Feishu 文档中的评论数量，并提取每条评论的评分（如"优秀""合格"）及评论时间。可用于教师作业打分、文档评审统计等场景。
 
 ---
 
@@ -122,19 +127,13 @@ curl --location "https://open.feishu.cn/open-apis/drive/v1/files/${FILE_TOKEN}/c
 ### 3.3 数据解析
 1. 评论数量：`data.items` 数组长度（所有分页累计）。
 2. 每条评论信息：
-   - `quote`：评论引用内容（如“作业”或日期）
+   - `quote`：评论引用内容（如"作业"或日期）
    - `create_time`：评论时间（Unix 时间戳，可转为可读格式）
-   - `reply_list.replies[*].content.elements[*].text_run.text`：评论得分（如“优秀”“合格”）
+   - `reply_list.replies[*].content.elements[*].text_run.text`：评论得分（如"优秀""合格"）
 
 ---
 
-### 3.4 示例统计输出
-暂时无法在飞书文档外展示此内容。  
-注：Unix 时间戳需转换为本地时间。
-
----
-
-### 3.5 注意事项
+### 3.4 注意事项
 1. Token 过期后需重新请求。
 2. 评论可能存在多条回复，需遍历 `reply_list.replies`。
 3. 文档类型需指定 `file_type=docx`（或与文档类型匹配）。
@@ -146,4 +145,3 @@ curl --location "https://open.feishu.cn/open-apis/drive/v1/files/${FILE_TOKEN}/c
 - 可将统计结果导出为 CSV 或 Excel，便于进一步分析。
 - 可按评分分类统计优秀率、合格率。
 - 可结合 Feishu 用户信息，统计每位员工或学生的平均得分。
-
